@@ -1,0 +1,34 @@
+1C 14C 6s 7s 8s
+0C 14C 6s 7s 8s
+AC 14C 6s 7s 8s
+13h/12s/4h/9d/02h
+0c;13c;13c 7s;8s
+1234567890 
+12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 
+123456789123456789123456789
+;;;;
+
+ / / / /
+aa-bb-aa-aa-aa
+14s/ss/13s/12h/12s/
+11/11/11/11/11
+13S-111S-10S-tS-7H
+-13S 12H 15D 5C jc
+kks 6s 6h 6c 6d
+1AS 6s 6h 6c 6d
+As as kc kc js qs
+As as kc kc js js qd qd
+"" "" "" "" ""
+- / - / - / - / -
+-/-/-/-/-             
+13d-kd/11d-13k 11d
+111111111111111111
+1d-2d-3d-3d-4a
+qq-qq-qq-qq-qq
+kk-kk-kk-kk-kk
+ll-ll-ll-ll-ll
+thisistoolongandinvalid
+9d-1a-1a-1a-1a
+9d-9d-9d-9d-dd
+1d-ac-9d-10d-td
+2d-1d-3d-5d/ad
