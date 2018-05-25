@@ -105,7 +105,7 @@ public class BigInt {
                     n1.operand = false;
                     return add(n1, n2);
                 } else {
-                    BigInt newNum = new BigInt(n2.number);
+                    BigInt newNum = new BigInt(n2.number);//here
                     newNum.negate();
                     newNum.operand = false;
                     return add(newNum, n1);
@@ -190,7 +190,7 @@ public class BigInt {
                 }
             } else {
                 BigInt newNum = new BigInt(n2.number);
-                if (!n1.negative && n2.negative) {//whats the point
+                if (!n1.negative && n2.negative) {
                     newNum.negate();
                 }
                 newNum.negate();
@@ -212,7 +212,10 @@ public class BigInt {
         return new BigInt(s.toString());
     }
 
-    private static ArrayList<Integer> subtractionHelper(  ArrayList<Integer> n1,  ArrayList<Integer> n2,  ArrayList<Integer> n3) {
+    private static ArrayList<Integer> subtractionHelper(
+            ArrayList<Integer> n1,
+            ArrayList<Integer> n2,
+            ArrayList<Integer> n3) {
 
         int num1 = 0;
         int num2 = 0;
@@ -493,9 +496,22 @@ public class BigInt {
         }
         
         result = longDivision(n1, n2);
-         if (((aNeg || bNeg) && (!aNeg || !bNeg)) && result[0].compareTo("0") != 0) {
+        if (result[1].length() > 1 && result[1].charAt(0) == '0') {
+			while (result[1].charAt(0) == '0') {
+				result[1] = result[1].substring(1);
+			}
+        }
+
+		 if (result[0].length() > 1 && result[0].charAt(0) == '0') {
+			while (result[0].charAt(0) == '0') {
+				result[0] = result[0].substring(1);
+			}
+        }
+		
+		if (((aNeg || bNeg) && (!aNeg || !bNeg)) && result[0].compareTo("0") != 0) {
             result[0] = "-" + result[0];
         }
+		
         return result;
     }
 
@@ -514,7 +530,7 @@ public class BigInt {
             num1 = dividend.get(index);
             temp.setNumber(result[1] + num1);
             if (compare(temp, n2) < 0) {
-                result[0] = "";
+                result[0] = "0";
                 result[1] = temp.toString();
             } else {
                 result[0] = "";
@@ -527,13 +543,11 @@ public class BigInt {
         }
 
         result[0] = newNum;
-        if (result[1].length() > 1 && result[1].charAt(0) == '0') {
-            result[1] = result[1].substring(1);
-        }
         return result;
     }
 
-    private static String[] divisionHelper(BigInt n1, BigInt n2, String[] result) {
+    private static String[] divisionHelper(BigInt n1, BigInt n2,
+            String[] result) {
 
         BigInt temp = n1;
         int compare = compare(temp, n2);

@@ -20,6 +20,7 @@ public:
 	BigInt(std::vector<int> num);
 	BigInt add(BigInt num1, BigInt num2);
 	BigInt sub(BigInt num1, BigInt num2);
+	BigInt mulitply(BigInt n1, BigInt n2);
 	int compare(BigInt num1, BigInt num2);
 	void half(BigInt n1);
 	std::string toString();
